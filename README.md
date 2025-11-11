@@ -29,6 +29,7 @@
 
 ---
 
+
 ## 🎯 Overview
 
 A complete end-to-end fraud detection system that processes credit card transactions in real-time using a PyTorch autoencoder model and Apache Kafka streaming pipeline. The system achieves **85%+ precision** and **80%+ recall** with **<10ms inference latency**.
@@ -267,6 +268,45 @@ Transaction CSV
 | **Monitoring** | Evidently AI | Data drift detection |
 
 ---
+
+## 📦 Dataset Setup
+
+The credit card fraud dataset is **not included** in the repository due to GitHub's 100MB file size limit.
+
+### Option 1: Download from Kaggle (Recommended)
+```bash
+# 1. Visit Kaggle and download
+https://www.kaggle.com/mlg-ulb/creditcardfraud
+
+# 2. Extract to data folder
+unzip creditcardfraud.zip
+mv creditcard.csv data/
+
+# 3. Verify
+ls data/creditcard.csv
+```
+
+### Option 2: Use Kaggle CLI
+```bash
+# Install Kaggle CLI
+pip install kaggle
+
+# Download dataset
+kaggle datasets download -d mlg-ulb/creditcardfraud
+
+# Extract
+unzip creditcardfraud.zip -d data/
+```
+
+### Option 3: Generate Sample Data
+
+For testing without downloading:
+```bash
+# Generate 10,000 synthetic transactions
+python scripts/generate_sample_data.py
+```
+
+**Note**: The system works with any CSV file in the correct format.
 
 ## 🚀 Quick Start
 
