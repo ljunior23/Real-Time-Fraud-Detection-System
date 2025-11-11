@@ -1,0 +1,18 @@
+# requirements.txt
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+torch
+kafka-python
+statsmodels
+plotly
+tsfresh
+streamlit
+requests
+dash
+plotly
+requests
+prometheus-client
+kafka-python

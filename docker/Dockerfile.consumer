@@ -1,0 +1,14 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Install dependencies
+RUN pip install --no-cache-dir \
+    kafka-python==2.0.2 \
+    requests==2.31.0 \
+    numpy==1.24.3
+
+# Copy consumer script
+COPY src/streaming/kafka_consumer.py .
+
+CMD ["python", "kafka_consumer.py"]

@@ -1,0 +1,13 @@
+{
+  "batch_size": 256,
+  "learning_rate": 0.001,
+  "num_epochs": 50,
+  "encoding_dim": 14,
+  "validation_split": 0.2,
+  "early_stopping_patience": 5,
+  "retraining_schedule": {
+    "min_days_between_retraining": 1,
+    "drift_threshold": 0.3,
+    "performance_degradation_threshold": 0.1
+  }
+}

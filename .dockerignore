@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints/
+notebooks/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile*
+
+# Tests
+tests/
+pytest.ini
+
+# Images
+images/
+*.png
+*.jpg
+
+# Reports
+reports/
+
+# Docs
+docs/
+*.md
+!README.md
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
