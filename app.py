@@ -87,7 +87,7 @@ def predict_fraud(transaction):
 def load_sample_data():
     """Load sample transactions from CSV"""
     try:
-        # Try multiple paths (local and Docker)
+        
         paths = [
             'data/creditcard.csv',           # Local
             './data/creditcard.csv',         # Docker
