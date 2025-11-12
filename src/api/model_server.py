@@ -58,7 +58,7 @@ def load_model_artifacts():
     print("Loading model artifacts...")
     
     try:
-        # Try Docker path first, fall back to local paths
+        # Load model
         model_paths = [
             '/app/models/autoencoder_fraud.pth',  # Docker path
             '../../models/autoencoder_fraud.pth',  # Local path
@@ -103,7 +103,7 @@ def load_model_artifacts():
         if scaler is None:
             raise FileNotFoundError("Could not find scaler.pkl in any location")
         
-        # Initialize feature engine (may not be available in all environments)
+        # Initialize feature engine (if available)
         try:
             feature_engine = TimeSeriesFeatureEngine(windows=[60, 300, 3600])
             print("✓ Feature engine initialized")
