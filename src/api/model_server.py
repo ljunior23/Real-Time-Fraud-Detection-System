@@ -1,8 +1,3 @@
-"""
-FastAPI server for real-time fraud detection
-Serves PyTorch Autoencoder model with <100ms latency
-"""
-
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import torch
