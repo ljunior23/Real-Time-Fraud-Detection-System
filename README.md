@@ -1,4 +1,4 @@
-# 🚨 Real-Time Fraud Detection System
+#   Real-Time Fraud Detection System
 
 > Production-ready fraud detection system using deep learning, Apache Kafka streaming, and Docker containerization.
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 📋 Table of Contents
+##   Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -30,21 +30,21 @@
 ---
 
 
-## 🎯 Overview
+##  Overview
 
 A complete end-to-end fraud detection system that processes credit card transactions in real-time using a PyTorch autoencoder model and Apache Kafka streaming pipeline. The system achieves **85%+ precision** and **80%+ recall** with **<10ms inference latency**.
 
-### 🌟 Key Highlights
+###   Key Highlights
 
-- 🧠 **Deep Learning**: PyTorch autoencoder for unsupervised anomaly detection
-- ⚡ **Real-time Streaming**: Apache Kafka message broker with producer/consumer architecture
-- 🚀 **Production-ready**: Full Docker Compose orchestration with 6 services
-- 📊 **Interactive Dashboard**: Streamlit web interface with live predictions
-- 🔄 **Scalable Pipeline**: Event-driven architecture supporting 300+ tx/sec
-- 📈 **Model Monitoring**: Automated drift detection and retraining pipeline
-- 🎯 **Model Optimization**: TorchScript, quantization, and ONNX export
+-   **Deep Learning**: PyTorch autoencoder for unsupervised anomaly detection
+-   **Real-time Streaming**: Apache Kafka message broker with producer/consumer architecture
+-   **Production-ready**: Full Docker Compose orchestration with 6 services
+-   **Interactive Dashboard**: Streamlit web interface with live predictions
+-   **Scalable Pipeline**: Event-driven architecture supporting 300+ tx/sec
+-   **Model Monitoring**: Automated drift detection and retraining pipeline
+-   **Model Optimization**: TorchScript, quantization, and ONNX export
 
-### 💼 Business Value
+###   Business Value
 
 - **Early Fraud Detection**: Identify fraudulent transactions before processing
 - **Real-time Processing**: Sub-second latency from transaction to decision
@@ -54,39 +54,39 @@ A complete end-to-end fraud detection system that processes credit card transact
 
 ---
 
-## ✨ Features
+##   Features
 
 ### Core Functionality
 
-✅ **Real-time Transaction Analysis**
+  **Real-time Transaction Analysis**
 - Process individual transactions with instant feedback
 - Sub-10ms prediction latency
 - Fraud probability scoring (0-100%)
 
-✅ **Batch Processing**
+  **Batch Processing**
 - Analyze 10-1000 transactions simultaneously
 - Comprehensive performance metrics
 - Downloadable results (CSV format)
 
-✅ **Interactive Dashboard**
+  **Interactive Dashboard**
 - Three operation modes: Single, Batch, Live Stream
 - Real-time visualization with Plotly charts
 - Session statistics and fraud rate tracking
 
-✅ **REST API**
+  **REST API**
 - FastAPI-powered endpoints
 - Automatic API documentation (Swagger UI)
 - Health checks and monitoring
 
 ### Streaming Pipeline
 
-✅ **Apache Kafka Integration**
+  **Apache Kafka Integration**
 - Producer sends transactions to Kafka topic
 - Consumer processes messages and calls API
 - Message persistence and replay
 - Scalable with multiple consumer groups
 
-✅ **Event-Driven Architecture**
+  **Event-Driven Architecture**
 - Decoupled producer and consumer
 - Asynchronous processing
 - Backpressure handling
@@ -94,19 +94,19 @@ A complete end-to-end fraud detection system that processes credit card transact
 
 ### Advanced Features
 
-✅ **Model Monitoring**
+  **Model Monitoring**
 - Data drift detection with Evidently AI
 - Population Stability Index (PSI) calculation
 - Performance degradation alerts
 - Prometheus metrics export
 - Real-time monitoring dashboard
 
-✅ **Automated Retraining**
+  **Automated Retraining**
 - Condition-based model updates
 - Model versioning with timestamps
 - Performance degradation detection
 
-✅ **Model Optimization**
+  **Model Optimization**
 - TorchScript compilation (30% faster)
 - Dynamic quantization (75% smaller)
 - ONNX export for cross-platform deployment
@@ -114,7 +114,7 @@ A complete end-to-end fraud detection system that processes credit card transact
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ### System Architecture Diagram
 ```
@@ -269,7 +269,7 @@ Transaction CSV
 
 ---
 
-## 📦 Dataset Setup
+##  Dataset Setup
 
 The credit card fraud dataset is **not included** in the repository due to GitHub's 100MB file size limit.
 
@@ -308,7 +308,7 @@ python scripts/generate_sample_data.py
 
 **Note**: The system works with any CSV file in the correct format.
 
-## 🚀 Quick Start
+##   Quick Start
 
 ### Prerequisites
 
@@ -352,9 +352,9 @@ fraud-dashboard    fraud_detection_stream   Up             8501
 
 Once all services are running:
 
-- **📊 Dashboard**: http://localhost:8501
-- **🔌 API**: http://localhost:8000
-- **📖 API Docs**: http://localhost:8000/docs
+- **  Dashboard**: http://localhost:8501
+- **  API**: http://localhost:8000
+- **  API Docs**: http://localhost:8000/docs
 
 ### Monitor the Pipeline
 ```bash
@@ -382,7 +382,7 @@ docker-compose down -v
 
 ---
 
-## 🔧 System Components
+##   System Components
 
 ### 1. Zookeeper
 **Purpose**: Kafka cluster coordination and configuration management
@@ -705,14 +705,14 @@ drift_detector = DriftDetector(
 drift_result = drift_detector.check_drift()
 
 if drift_result['drift_detected']:
-    print(f"⚠️ Drift detected!")
+    print(f" Drift detected!")
     print(f"Drift share: {drift_result['drift_share']:.1%}")
     print(f"Drifted features: {drift_result['drifted_features']}")
 ```
 
 **Output:**
 ```
-⚠️ Drift detected!
+ Drift detected!
 Drift share: 32.5%
 Drifted features: ['V1', 'V4', 'Amount', 'Hour']
 ```
@@ -778,7 +778,7 @@ degradation = perf_monitor.detect_performance_degradation(
 )
 
 if degradation['degraded']:
-    print(f"🚨 Performance degradation detected!")
+    print(f" Performance degradation detected!")
     print(f"F1 drop: {degradation['f1_drop']:.1%}")
 ```
 
@@ -1000,7 +1000,7 @@ models/
 
 ---
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 ### Model Performance
 
@@ -1036,7 +1036,7 @@ models/
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 fraud-detection/
 │
@@ -1233,7 +1233,7 @@ docker stats fraud-consumer
 
 ---
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -1334,7 +1334,7 @@ docker-compose logs consumer | grep "Processed:"
 
 ---
 
-## 💻 Development
+##  Development
 
 ### Local Development (Without Docker)
 
@@ -1408,41 +1408,41 @@ pytest --cov=src tests/
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 
 ### Machine Learning
-- ✅ Unsupervised anomaly detection
-- ✅ Deep learning with PyTorch
-- ✅ Feature engineering
-- ✅ Model evaluation metrics
-- ✅ Production model optimization
+-  Unsupervised anomaly detection
+-  Deep learning with PyTorch
+-  Feature engineering
+-  Model evaluation metrics
+-  Production model optimization
 
 ### Real-Time Systems
-- ✅ Apache Kafka architecture
-- ✅ Producer-consumer pattern
-- ✅ Event-driven architecture
-- ✅ Message serialization
-- ✅ Stream processing
+-  Apache Kafka architecture
+-  Producer-consumer pattern
+-  Event-driven architecture
+-  Message serialization
+-  Stream processing
 
 ### Software Engineering
-- ✅ Microservices architecture
-- ✅ REST API design
-- ✅ Docker containerization
-- ✅ Service orchestration
-- ✅ Health checks and monitoring
+-  Microservices architecture
+-  REST API design
+-  Docker containerization
+-  Service orchestration
+-  Health checks and monitoring
 
 ### DevOps
-- ✅ Multi-container applications
-- ✅ Service dependencies
-- ✅ Volume management
-- ✅ Network configuration
-- ✅ Log aggregation
+-  Multi-container applications
+-  Service dependencies
+-  Volume management
+-  Network configuration
+-  Log aggregation
 
 ---
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 ### Short-term
 - [ ] Add Prometheus metrics export
@@ -1467,27 +1467,22 @@ This project demonstrates:
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👤 Contact
+##  Contact
 
-**Kwame**  
-🎓 AI/ML Master's Student  
-🏫 University of Michigan-Dearborn
-
-📧 **Email**: your.email@example.com  
-💼 **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
-🐙 **GitHub**: [@yourusername](https://github.com/yourusername)
-
-**Project Link**: [https://github.com/yourusername/fraud-detection](https://github.com/yourusername/fraud-detection)
+**George Kumi Acheampong**
+ AI/ML Master's Student  
+ University of Michigan-Dearborn
+ kwaleon@umich.edu
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Dataset**: Machine Learning Group - ULB ([Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud))
 - **Apache Kafka**: The Apache Software Foundation
