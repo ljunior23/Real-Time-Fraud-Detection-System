@@ -1494,7 +1494,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-### ⭐ Star this repository if you found it helpful!
+### Star this repository if you found it helpful!
 
 **Made with ❤️ by George**
 
